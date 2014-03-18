@@ -1,0 +1,12 @@
+<div class="panel-heading"><h3> <span class="label label-default">Sign up</span></h3></div>
+<div class="panel-body">
+	<%=  semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+	  <%= devise_error_messages! %>
+  	 <%= f.inputs :email, :password, :password_confirmation %>
+     <%= f.actions :submit, :cancel %>
+	<% end %>
+</div>		
+
+<%= render "devise/shared/links" %>
+ 
+ 
