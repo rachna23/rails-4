@@ -57,3 +57,4 @@ gem 'the_role', '~> 2.3'
 gem 'ckeditor'
 gem 'paperclip'
 gem "heroku"
+gem 'rails_12factor', group: :production
