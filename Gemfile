@@ -4,7 +4,13 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 
 # Use mysql as the database for Active Record
-gem 'mysql2'
+#gem 'mysql2'
+group :development do
+  gem 'mysql2'
+end
+group :production do
+  gem 'pg'
+end
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -50,3 +56,4 @@ gem 'formtastic-bootstrap'
 gem 'the_role', '~> 2.3'
 gem 'ckeditor'
 gem 'paperclip'
+gem "heroku"
