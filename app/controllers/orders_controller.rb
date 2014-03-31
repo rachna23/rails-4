@@ -1,4 +1,5 @@
 class OrdersController < ApplicationController
+  require 'will_paginate/array'
   before_action :login_required, except: [:index, :show]
   before_action :role_required,  except: [:index, :show]
   before_action :set_order, only: [:edit, :update, :destroy,:show]
@@ -7,7 +8,14 @@ class OrdersController < ApplicationController
   # GET /orders
   # GET /orders.json
   def index
-    @orders = Order.all
+    if params[:search]
+      @search = Order.search do
+        fulltext params[:search]
+      end
+      @orders = @search.results
+    else
+      @orders = Order.paginate(:page => params[:page])
+    end 
   end
 
   # GET /orders/1

@@ -58,3 +58,9 @@ gem 'ckeditor'
 gem 'paperclip'
 gem "heroku"
 gem 'rails_12factor', group: :production
+gem 'will_paginate', '~> 3.0'
+gem 'sunspot_rails'
+gem 'sunspot_solr' # optional pre-packaged Solr distribution for use in development
+gem 'progress_bar'
+#gem "best_in_place", github: 'bernat/best_in_place', branch: "rails-4"
+gem 'best_in_place', github: 'aaronchi/best_in_place'

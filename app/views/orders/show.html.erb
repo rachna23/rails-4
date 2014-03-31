@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Title:</strong>
-  <%= @order.title %>
+  <%= best_in_place @order, :title %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @order.description %>
+  <%= best_in_place @order, :description %>
 </p>
 
 <p>
@@ -16,3 +16,4 @@
 
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
+
